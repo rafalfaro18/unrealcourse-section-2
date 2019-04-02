@@ -11,7 +11,7 @@ constexpr int WORLD_LENGHT = 5;
 int main() {
 	PrintIntro();
 
-	for (int count = 1; count <= 5; count++) {
+	for (int count = 1; count <= WORLD_LENGHT; count++) {
 		GetGuessAndPrintBack();
 	}
 
