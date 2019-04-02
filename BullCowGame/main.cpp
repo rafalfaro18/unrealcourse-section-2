@@ -5,7 +5,7 @@ using namespace std;
 //headers
 void PrintIntro();
 void PlayGame();
-string GetGuessAndPrintBack();
+string GetGuess();
 constexpr int WORLD_LENGHT = 5;
 
 //app entry point
@@ -17,13 +17,6 @@ int main() {
 	return 0;
 }
 
-void PlayGame()
-{
-	for (int count = 1; count <= WORLD_LENGHT; count++) {
-		GetGuessAndPrintBack();
-	}
-}
-
 void PrintIntro() {
 	//introduce the game
 	cout << "Welcome to Bulls and Cows, a fun word game.\n";
@@ -31,14 +24,20 @@ void PrintIntro() {
 	return;
 }
 
-string GetGuessAndPrintBack() {
+string GetGuess() {
 	//get a guess from the player
 	cout << "\nEnter your guess: \n";
 	string Guess = "";
 	getline(cin, Guess);
 
-	//repeat the guess back to them
-	cout<< "Your guess was: " + Guess + "\n";
-
 	return Guess;
+}
+
+void PlayGame()
+{
+	for (int count = 1; count <= WORLD_LENGHT; count++) {
+		string Guess = GetGuess();
+		//repeat the guess back to them
+		cout << "Your guess was: " + Guess + "\n";
+	}
 }
