@@ -9,11 +9,12 @@ int main() {
 	cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking off?\n";
 
 	//get a guess from the player
+	cout << "\nEnter your guess: \n";
 	string Guess = "";
 	cin >> Guess;
 
 	//repeat the guess back to them
-	cout << Guess << "\n";
+	cout << "Your guess was: " << Guess << "\n";
 
 	return 0;
 }
