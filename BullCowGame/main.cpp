@@ -2,11 +2,17 @@
 #include <string>
 using namespace std;
 
-int main() {
+void PrintIntro() {
 	//introduce the game
 	constexpr int WORLD_LENGHT = 5;
 	cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking off?\n";
+	return;
+}
+
+int main() {
+
+	PrintIntro();
 
 	//get a guess from the player
 	cout << "\nEnter your guess: \n";
