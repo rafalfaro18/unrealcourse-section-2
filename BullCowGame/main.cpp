@@ -2,14 +2,9 @@
 #include <string>
 using namespace std;
 
-void PrintIntro() {
-	//introduce the game
-	constexpr int WORLD_LENGHT = 5;
-	cout << "Welcome to Bulls and Cows, a fun word game.\n";
-	cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking off?\n";
-	return;
-}
+void PrintIntro();
 
+//app entry point
 int main() {
 
 	PrintIntro();
@@ -30,4 +25,12 @@ int main() {
 	cout << "Your guess was: " << Guess << "\n";
 
 	return 0;
+}
+
+void PrintIntro() {
+	//introduce the game
+	constexpr int WORLD_LENGHT = 5;
+	cout << "Welcome to Bulls and Cows, a fun word game.\n";
+	cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking off?\n";
+	return;
 }
