@@ -16,5 +16,12 @@ int main() {
 	//repeat the guess back to them
 	cout << "Your guess was: " << Guess << "\n";
 
+	//get a guess from the player
+	cout << "\nEnter your guess: \n";
+	getline(cin, Guess);
+
+	//repeat the guess back to them
+	cout << "Your guess was: " << Guess << "\n";
+
 	return 0;
 }
