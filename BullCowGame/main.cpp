@@ -3,26 +3,16 @@
 using namespace std;
 
 void PrintIntro();
+string GetGuess();
 
 //app entry point
 int main() {
 
 	PrintIntro();
 
-	//get a guess from the player
-	cout << "\nEnter your guess: \n";
-	string Guess = "";
-	getline(cin, Guess);
+	cout<<GetGuess();
 
-	//repeat the guess back to them
-	cout << "Your guess was: " << Guess << "\n";
-
-	//get a guess from the player
-	cout << "\nEnter your guess: \n";
-	getline(cin, Guess);
-
-	//repeat the guess back to them
-	cout << "Your guess was: " << Guess << "\n";
+	cout<<GetGuess();
 
 	return 0;
 }
@@ -33,4 +23,14 @@ void PrintIntro() {
 	cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking off?\n";
 	return;
+}
+
+string GetGuess() {
+	//get a guess from the player
+	cout << "\nEnter your guess: \n";
+	string Guess = "";
+	getline(cin, Guess);
+
+	//repeat the guess back to them
+	return "Your guess was: " + Guess + "\n";
 }
