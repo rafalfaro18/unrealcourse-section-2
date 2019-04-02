@@ -20,7 +20,6 @@ int main() {
 
 void PrintIntro() {
 	//introduce the game
-	
 	cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking off?\n";
 	return;
