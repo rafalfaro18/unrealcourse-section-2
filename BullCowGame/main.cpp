@@ -4,6 +4,7 @@ using namespace std;
 
 //headers
 void PrintIntro();
+void PlayGame();
 string GetGuessAndPrintBack();
 constexpr int WORLD_LENGHT = 5;
 
@@ -11,11 +12,16 @@ constexpr int WORLD_LENGHT = 5;
 int main() {
 	PrintIntro();
 
+	PlayGame();
+
+	return 0;
+}
+
+void PlayGame()
+{
 	for (int count = 1; count <= WORLD_LENGHT; count++) {
 		GetGuessAndPrintBack();
 	}
-
-	return 0;
 }
 
 void PrintIntro() {
