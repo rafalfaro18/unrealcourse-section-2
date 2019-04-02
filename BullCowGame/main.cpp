@@ -4,16 +4,16 @@ using namespace std;
 
 //headers
 void PrintIntro();
-string GetGuess();
+string GetGuessAndPrintBack();
 
 //app entry point
 int main() {
 
 	PrintIntro();
 
-	cout<<GetGuess();
+	GetGuessAndPrintBack();
 
-	cout<<GetGuess();
+	GetGuessAndPrintBack();
 
 	return 0;
 }
@@ -26,12 +26,14 @@ void PrintIntro() {
 	return;
 }
 
-string GetGuess() {
+string GetGuessAndPrintBack() {
 	//get a guess from the player
 	cout << "\nEnter your guess: \n";
 	string Guess = "";
 	getline(cin, Guess);
 
 	//repeat the guess back to them
-	return "Your guess was: " + Guess + "\n";
+	cout<< "Your guess was: " + Guess + "\n";
+
+	return Guess;
 }
