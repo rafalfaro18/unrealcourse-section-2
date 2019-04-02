@@ -5,22 +5,22 @@ using namespace std;
 //headers
 void PrintIntro();
 string GetGuessAndPrintBack();
+constexpr int WORLD_LENGHT = 5;
 
 //app entry point
 int main() {
-
 	PrintIntro();
 
-	GetGuessAndPrintBack();
-
-	GetGuessAndPrintBack();
+	for (int count = 1; count <= 5; count++) {
+		GetGuessAndPrintBack();
+	}
 
 	return 0;
 }
 
 void PrintIntro() {
 	//introduce the game
-	constexpr int WORLD_LENGHT = 5;
+	
 	cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking off?\n";
 	return;
