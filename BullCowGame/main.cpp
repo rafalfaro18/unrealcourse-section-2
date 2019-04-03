@@ -45,7 +45,7 @@ void PlayGame()
 }
 
 bool AskToPlayAgain() {
-	cout << "Do you want to play again? ";
+	cout << "Do you want to play again? (y/n) ";
 	string Response = "";
 	getline(cin, Response);
 
