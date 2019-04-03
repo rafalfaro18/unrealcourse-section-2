@@ -30,7 +30,7 @@ void PrintIntro() {
 
 std::string GetGuess() {
 	//get a guess from the player
-	std::cout << "\nEnter your guess: \n";
+	std::cout << "\nTry "<< BCGame.GetCurrentTry() <<". Enter your guess: \n";
 	std::string Guess = "";
 	getline(std::cin, Guess);
 
