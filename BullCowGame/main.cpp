@@ -13,7 +13,7 @@ constexpr int WORLD_LENGHT = 5;
 int main() {
 	PrintIntro();
 	PlayGame();
-	cout<<AskToPlayAgain();
+	AskToPlayAgain();
 	return 0;
 }
 
