@@ -7,7 +7,7 @@ void PrintIntro();
 void PlayGame();
 std::string GetGuess();
 bool AskToPlayAgain();
-constexpr int WORLD_LENGHT = 5;
+
 FBullCowGame BCGame;//instantiate a new game.
 
 //app entry point
@@ -22,6 +22,7 @@ int main() {
 
 void PrintIntro() {
 	//introduce the game
+	constexpr int WORLD_LENGHT = 9;
 	std::cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	std::cout << "Can you guess the " << WORLD_LENGHT << " letter isogram I'm thinking off?\n";
 	return;
