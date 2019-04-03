@@ -8,6 +8,7 @@ void PlayGame();
 std::string GetGuess();
 bool AskToPlayAgain();
 constexpr int WORLD_LENGHT = 5;
+FBullCowGame BCGame;//instantiate a new game.
 
 //app entry point
 int main() {
@@ -37,7 +38,6 @@ std::string GetGuess() {
 
 void PlayGame()
 {
-	FBullCowGame BCGame;//instantiate a new game.
 	int MaxTries = BCGame.GetMaxTries();
 
 	for (int count = 1; count <= MaxTries; count++) {
