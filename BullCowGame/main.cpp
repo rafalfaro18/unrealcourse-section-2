@@ -6,14 +6,14 @@ using namespace std;
 void PrintIntro();
 void PlayGame();
 string GetGuess();
+bool AskToPlayAgain();
 constexpr int WORLD_LENGHT = 5;
 
 //app entry point
 int main() {
 	PrintIntro();
-
 	PlayGame();
-
+	AskToPlayAgain();
 	return 0;
 }
 
@@ -40,4 +40,12 @@ void PlayGame()
 		//repeat the guess back to them
 		cout << "Your guess was: " + Guess + "\n";
 	}
+}
+
+bool AskToPlayAgain() {
+	cout << "Do you want to play again? ";
+	string Response = "";
+	getline(cin, Response);
+
+	return (Response[0] == 'y') || (Response[0] == 'Y');
 }
