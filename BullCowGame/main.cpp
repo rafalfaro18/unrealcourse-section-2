@@ -11,9 +11,11 @@ constexpr int WORLD_LENGHT = 5;
 
 //app entry point
 int main() {
-	PrintIntro();
-	PlayGame();
-	AskToPlayAgain();
+	do {
+		system("CLS");
+		PrintIntro();
+		PlayGame();
+	} while (AskToPlayAgain());
 	return 0;
 }
 
