@@ -14,5 +14,5 @@ public:
 // ^^ Please try and ignore this and focus on the interface above ^^
 private:
 	int MyCurrentTry;
-	int MyMaxTries;
+	int MyMaxTries = 5;
 };

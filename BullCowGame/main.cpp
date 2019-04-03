@@ -37,7 +37,10 @@ std::string GetGuess() {
 
 void PlayGame()
 {
-	for (int count = 1; count <= WORLD_LENGHT; count++) {
+	FBullCowGame BCGame;//instantiate a new game.
+	int MaxTries = BCGame.GetMaxTries();
+
+	for (int count = 1; count <= MaxTries; count++) {
 		std::string Guess = GetGuess();
 		//repeat the guess back to them
 		std::cout << "Your guess was: " + Guess + "\n";
