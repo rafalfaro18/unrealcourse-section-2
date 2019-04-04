@@ -2,6 +2,8 @@
 #include <string>
 #include "FBullCowGame.h"
 
+using FText = std::string;
+
 //headers
 void PrintIntro();
 void PlayGame();
