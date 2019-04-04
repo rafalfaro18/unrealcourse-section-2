@@ -31,13 +31,13 @@ bool FBullCowGame::CheckGuessValidity(FString)
 }
 
 // receives a VALID guess, increments turn, and returns count
-BullCowCount FBullCowGame::SubmitGuess(FString)
+FBullCowCount FBullCowGame::SubmitGuess(FString)
 {
 	// increment the turn number
 	MyCurrentTry++;
 
 	// setup a return variable
-	BullCowCount BullCowCount;
+	FBullCowCount BullCowCount;
 
 	// loop all letters in the guess
 		// compare letters against the hidden word
