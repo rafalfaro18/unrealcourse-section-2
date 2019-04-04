@@ -8,7 +8,7 @@ int32 FBullCowGame::GetMaxTries() const { return MyMaxTries; }
 
 int32 FBullCowGame::GetCurrentTry() const { return MyCurrentTry; }
 
-int32 FBullCowGame::GetCurrentWordLength() const
+int32 FBullCowGame::GetHiddenWordLength() const
 {
 	int32 WordLength = MyHiddenWord.length();
 	return WordLength;
