@@ -41,6 +41,9 @@ FBullCowCount FBullCowGame::SubmitGuess(FString)
 
 	// loop all letters in the guess
 		// compare letters against the hidden word
+			// if they match then
+				// increment bulls if they're in the same place
+				// increment cows if not
 
 	return BullCowCount;
 }
