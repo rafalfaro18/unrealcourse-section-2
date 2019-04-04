@@ -7,7 +7,7 @@ using FText = std::string;
 //headers
 void PrintIntro();
 void PlayGame();
-std::string GetGuess();
+FText GetGuess();
 bool AskToPlayAgain();
 
 FBullCowGame BCGame;//instantiate a new game.
@@ -30,11 +30,11 @@ void PrintIntro() {
 	return;
 }
 
-std::string GetGuess() {
+FText GetGuess() {
 	int CurrentTry = BCGame.GetCurrentTry();
 	//get a guess from the player
 	std::cout << "\nTry "<< CurrentTry <<". Enter your guess: \n";
-	std::string Guess = "";
+	FText Guess = "";
 	getline(std::cin, Guess);
 
 	return Guess;
@@ -47,7 +47,7 @@ void PlayGame()
 
 	// TODO change from FOR to WHILE loop when validating tries
 	for (int count = 1; count <= MaxTries; count++) {
-		std::string Guess = GetGuess(); // TODO loop-check valid guess
+		FText Guess = GetGuess(); // TODO loop-check valid guess
 
 		// Submit valid guess to the game
 		// Print number of bulls and cows
@@ -61,7 +61,7 @@ void PlayGame()
 
 bool AskToPlayAgain() {
 	std::cout << "Do you want to play again? (y/n) ";
-	std::string Response = "";
+	FText Response = "";
 	getline(std::cin, Response);
 
 	return (Response[0] == 'y') || (Response[0] == 'Y');
