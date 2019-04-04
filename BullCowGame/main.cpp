@@ -7,6 +7,7 @@ For game logic see the FBullCowGame class.
 #include "FBullCowGame.h"
 
 using FText = std::string;
+using int32 = int;
 
 //headers
 void PrintIntro();
@@ -28,14 +29,14 @@ int main() {
 
 void PrintIntro() {
 	//introduce the game
-	constexpr int WORD_LENGHT = 9;
+	constexpr int32 WORD_LENGHT = 9;
 	std::cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	std::cout << "Can you guess the " << WORD_LENGHT << " letter isogram I'm thinking off?\n";
 	return;
 }
 
 FText GetGuess() {
-	int CurrentTry = BCGame.GetCurrentTry();
+	int32 CurrentTry = BCGame.GetCurrentTry();
 	//get a guess from the player
 	std::cout << "\nTry "<< CurrentTry <<". Enter your guess: \n";
 	FText Guess = "";
@@ -47,10 +48,10 @@ FText GetGuess() {
 void PlayGame()
 {
 	BCGame.Reset();
-	int MaxTries = BCGame.GetMaxTries();
+	int32 MaxTries = BCGame.GetMaxTries();
 
 	// TODO change from FOR to WHILE loop when validating tries
-	for (int count = 1; count <= MaxTries; count++) {
+	for (int32 count = 1; count <= MaxTries; count++) {
 		FText Guess = GetGuess(); // TODO loop-check valid guess
 
 		// Submit valid guess to the game
