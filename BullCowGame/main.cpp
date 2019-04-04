@@ -29,7 +29,7 @@ int main() {
 
 void PrintIntro() {
 	//introduce the game
-	constexpr int32 WORD_LENGHT = 9;
+	int32 WORD_LENGHT = BCGame.GetCurrentWordLength();
 	std::cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	std::cout << "Can you guess the " << WORD_LENGHT << " letter isogram I'm thinking off?\n";
 	return;
