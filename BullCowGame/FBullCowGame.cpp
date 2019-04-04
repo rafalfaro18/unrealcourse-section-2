@@ -18,7 +18,7 @@ void FBullCowGame::Reset()
 	constexpr int32 MAX_TRIES = 8;
 	MyMaxTries = MAX_TRIES;
 
-	const FString HIDDEN_WORD = "planet";
+	const FString HIDDEN_WORD = "ant";
 	MyHiddenWord = HIDDEN_WORD;
 
 	MyCurrentTry = 1;
@@ -52,7 +52,6 @@ FBullCowCount FBullCowGame::SubmitGuess(FString Guess)
 					// increment bulls
 					BullCowCount.Bulls++;
 				} else {
-				// else
 					// increment cows
 					BullCowCount.Cows++;
 				}
