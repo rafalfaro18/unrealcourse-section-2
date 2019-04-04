@@ -4,7 +4,7 @@
 using FString = std::string;
 using int32 = int;
 
-//struct member variables are public
+//All values initialized to 0. Struct member variables are public.
 struct BullCowCount
 {
 	int32 Bulls = 0;
@@ -29,4 +29,5 @@ private:
 	//se constructor for initialization
 	int32 MyCurrentTry;
 	int32 MyMaxTries;
+	FString MyHiddenWord;
 };
