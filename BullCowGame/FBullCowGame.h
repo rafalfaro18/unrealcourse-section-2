@@ -1,6 +1,8 @@
 #pragma once
 #include <string>
 
+using FString = std::string;
+
 class FBullCowGame
 {
 public:
@@ -11,7 +13,7 @@ public:
 	bool IsGameWon() const;
 	
 	void Reset();// TODO make a more rich return value.
-	bool CheckGuessValidity(std::string); // TODO make a more rich return value.
+	bool CheckGuessValidity(FString); // TODO make a more rich return value.
 	// TODO provide a method for counting bulls & cows, and increase try #.
 
 
