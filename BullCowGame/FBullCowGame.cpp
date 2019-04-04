@@ -23,7 +23,7 @@ bool FBullCowGame::CheckGuessValidity(FString) const
 void FBullCowGame::Reset()
 {
 	constexpr int32 MAX_TRIES = 8;
-	const FString HIDDEN_WORD = "ant";
+	const FString HIDDEN_WORD = "planet";
 
 	MyMaxTries = MAX_TRIES;
 	MyHiddenWord = HIDDEN_WORD;
