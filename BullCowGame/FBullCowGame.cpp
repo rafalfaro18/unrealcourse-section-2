@@ -13,7 +13,7 @@ int32 FBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); 
 bool FBullCowGame::IsGameWon() const { return bGameIsWon; }
 
 int32 FBullCowGame::GetMaxTries() const { 
-	TMap<int32, int32> WordLengthToMaxTries{ {3,4} , {4,7}, {5,10}, {6,15}, {7,20} };
+	TMap<int32, int32> WordLengthToMaxTries{ {3,4}, {4,7}, {5,10}, {6,15}, {7,20} };
 	return WordLengthToMaxTries[MyHiddenWord.length()];
 }
 
