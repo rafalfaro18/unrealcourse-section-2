@@ -8,6 +8,7 @@ For game logic see the FBullCowGame class.
 #include <string>
 #include "FBullCowGame.h"
 
+// make syntax Unreal like
 using FText = std::string;
 using int32 = int;
 
