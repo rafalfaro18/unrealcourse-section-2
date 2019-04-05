@@ -15,22 +15,22 @@ bool FBullCowGame::IsGameWon() const
 	return false;
 }
 
-EWordStatus FBullCowGame::CheckGuessValidity(FString) const
+EGuessStatus FBullCowGame::CheckGuessValidity(FString) const
 {
 	// if the guess isn't an isogram
 	if (false) {
-		return EWordStatus::Not_Isogram;
+		return EGuessStatus::Not_Isogram;
 	}
 	// if the guess isn't all lowercase
 	else if (false) {
-		return EWordStatus::Not_Lowercase;
+		return EGuessStatus::Not_Lowercase;
 	}
 	// if the guess length is wrong
 	else if (false) {
-		return EWordStatus::Wrong_Lenght;
+		return EGuessStatus::Wrong_Lenght;
 	}
 	else {
-		return EWordStatus::OK;
+		return EGuessStatus::OK;
 	}
 }
 
