@@ -96,8 +96,7 @@ bool FBullCowGame::IsIsogram(FString Word) const
 		if (LetterSeen[Letter]) {
 			// we do NOT have an isogram
 			return false;
-		}
-		else {
+		} else {
 			// add the letter to the map as seen
 			LetterSeen[Letter] = true;
 		}
