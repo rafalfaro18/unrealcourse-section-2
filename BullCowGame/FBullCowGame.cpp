@@ -93,9 +93,14 @@ bool FBullCowGame::IsIsogram(FString Word) const
 	for (auto Letter : Word) {
 		Letter = tolower(Letter); // handle mixed case
 		// if the letter is in the map
+		if (LetterSeen[Letter]) {
 			// we do NOT have an isogram
-		// otherwise
+			return false;
+		}
+		else {
 			// add the letter to the map as seen
+			LetterSeen[Letter] = true;
+		}
 	}
 
 	return true; // for example in cases where /0 is entered
