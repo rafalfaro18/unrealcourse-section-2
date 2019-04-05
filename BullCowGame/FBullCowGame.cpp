@@ -16,9 +16,9 @@ EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
 {
 	// if the guess isn't an isogram
 	if (false) {
-		return EGuessStatus::Not_Isogram;
+		return EGuessStatus::Not_Isogram; // TODO write function
 	}
-	// if the guess isn't all lowercase
+	// if the guess isn't all lowercase TODO write function
 	else if (false) {
 		return EGuessStatus::Not_Lowercase;
 	}
