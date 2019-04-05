@@ -91,6 +91,7 @@ bool FBullCowGame::IsIsogram(FString Word) const
 
 	// loop all letters of the word
 	for (auto Letter : Word) {
+		Letter = tolower(Letter); // handle mixed case
 		// if the letter is in the map
 			// we do NOT have an isogram
 		// otherwise
