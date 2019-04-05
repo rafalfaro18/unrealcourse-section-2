@@ -32,7 +32,6 @@ int main() {
 }
 
 void PrintIntro() {
-	//introduce the game
 	std::cout << "Welcome to Bulls and Cows, a fun word game.\n";
 	std::cout << std::endl;
 	std::cout << "          }   {         ___ " << std::endl;
