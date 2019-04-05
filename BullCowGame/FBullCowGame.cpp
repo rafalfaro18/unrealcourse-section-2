@@ -18,13 +18,20 @@ bool FBullCowGame::IsGameWon() const
 EWordStatus FBullCowGame::CheckGuessValidity(FString) const
 {
 	// if the guess isn't an isogram
-		// return an error
+	if (false) {
+		return EWordStatus::Not_Isogram;
+	}
 	// if the guess isn't all lowercase
-		// return an error
+	else if (false) {
+		return EWordStatus::Not_Lowercase;
+	}
 	// if the guess length is wrong
-		// return an error
-	// else
-		// return OK
+	else if (false) {
+		return EWordStatus::Wrong_Lenght;
+	}
+	else {
+		return EWordStatus::OK;
+	}
 }
 
 void FBullCowGame::Reset()
