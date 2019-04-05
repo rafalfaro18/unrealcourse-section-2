@@ -12,7 +12,7 @@ using int32 = int;
 //headers
 void PrintIntro();
 void PlayGame();
-FText GetGuess();
+FText GetValidGuess();
 bool AskToPlayAgain();
 
 FBullCowGame BCGame;//instantiate a new game.
@@ -34,14 +34,30 @@ void PrintIntro() {
 	return;
 }
 
-FText GetGuess() { // TODO change to GetValidGuess
-	int32 CurrentTry = BCGame.GetCurrentTry();
+// loop continuouslly until the user gives a valid guess
+FText GetValidGuess() {
 	//get a guess from the player
+	int32 CurrentTry = BCGame.GetCurrentTry();
 	std::cout << "\nTry "<< CurrentTry <<". Enter your guess: \n";
 	FText Guess = "";
 	getline(std::cin, Guess);
 
-	return Guess;
+	EGuessStatus Status = BCGame.CheckGuessValidity(Guess);
+
+	switch (Status)
+	{
+	case EGuessStatus::OK:
+		break;
+	case EGuessStatus::Not_Isogram:
+		break;
+	case EGuessStatus::Wrong_Lenght:
+		std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << " letter word.\n\n";
+		break;
+	case EGuessStatus::Not_Lowercase:
+		break;
+	default:
+		return Guess;
+	}
 }
 
 void PlayGame()
@@ -50,9 +66,7 @@ void PlayGame()
 	int32 MaxTries = BCGame.GetMaxTries();
 
 	for (int32 count = 1; count <= MaxTries; count++) { // TODO change from FOR to WHILE loop when validating tries
-		FText Guess = GetGuess();
-
-		EGuessStatus Status = BCGame.CheckGuessValidity(Guess);
+		FText Guess = GetValidGuess();
 
 		// Submit valid guess to the game
 		FBullCowCount BullCowCount = BCGame.SubmitGuess(Guess);
