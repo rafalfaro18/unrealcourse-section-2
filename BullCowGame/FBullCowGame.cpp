@@ -47,7 +47,7 @@ void FBullCowGame::Reset()
 }
 
 // receives a VALID guess, increments turn, and returns count
-FBullCowCount FBullCowGame::SubmitGuess(FString Guess)
+FBullCowCount FBullCowGame::SubmitValidGuess(FString Guess)
 {
 	// increment the turn number
 	MyCurrentTry++;

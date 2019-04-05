@@ -31,7 +31,7 @@ public:
 	EGuessStatus CheckGuessValidity(FString) const;
 	
 	void Reset();// TODO make a more rich return value.
-	FBullCowCount SubmitGuess(FString);
+	FBullCowCount SubmitValidGuess(FString);
 
 // ^^ Please try and ignore this and focus on the interface above ^^
 private:
