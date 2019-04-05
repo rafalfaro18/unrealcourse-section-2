@@ -55,8 +55,6 @@ FText GetValidGuess() {
 	case EGuessStatus::Not_Lowercase:
 		std::cout << "Please enter all lowercase letters.\n\n";
 		break;
-	case EGuessStatus::OK:
-		return Guess;
 	default:
 		return Guess;
 	}
