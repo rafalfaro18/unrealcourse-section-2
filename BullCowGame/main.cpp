@@ -46,8 +46,6 @@ FText GetValidGuess() {
 
 	switch (Status)
 	{
-	case EGuessStatus::OK:
-		return Guess;
 	case EGuessStatus::Wrong_Lenght:
 		std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << " letter word.\n\n";
 		break;
@@ -55,8 +53,10 @@ FText GetValidGuess() {
 		std::cout << "Please enter a word without repeating letters.\n\n";
 		break;
 	case EGuessStatus::Not_Lowercase:
-		std::cout << "Please enter a lower case word.\n\n";
+		std::cout << "Please enter all lowercase letters.\n\n";
 		break;
+	case EGuessStatus::OK:
+		return Guess;
 	default:
 		return Guess;
 	}
