@@ -1,10 +1,14 @@
+/* The game logic (no view code or direct user interaction)
+The game is a simple guess word game based on Mastermind
+*/
 #pragma once
 #include <string>
 
+// make syntax Unreal like
 using FString = std::string;
 using int32 = int;
 
-//All values initialized to 0. Struct member variables are public.
+//Struct member variables are public.
 struct FBullCowCount
 {
 	int32 Bulls = 0;
