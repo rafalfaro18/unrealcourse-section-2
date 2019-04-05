@@ -4,15 +4,15 @@
 
 using int32 = int;
 
-FBullCowGame::FBullCowGame() { Reset(); }
-
-int32 FBullCowGame::GetMaxTries() const { return MyMaxTries; }
+FBullCowGame::FBullCowGame() { Reset(); } // default constructor
 
 int32 FBullCowGame::GetCurrentTry() const { return MyCurrentTry; }
 
 int32 FBullCowGame::GetHiddenWordLength() const { return MyHiddenWord.length(); }
 
 bool FBullCowGame::IsGameWon() const { return bGameIsWon; }
+
+int32 FBullCowGame::GetMaxTries() const { return MyMaxTries; }
 
 EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
 {
