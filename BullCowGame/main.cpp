@@ -77,6 +77,7 @@ FText GetValidGuess() {
 	return Guess;
 }
 
+// plays a single game to completion.
 void PlayGame()
 {
 	BCGame.Reset();
