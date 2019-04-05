@@ -17,7 +17,7 @@ bool FBullCowGame::IsGameWon() const { return bGameIsWon; }
 EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
 {
 	// if the guess isn't an isogram
-	if (false) {
+	if (!IsIsogram(Guess)) {
 		return EGuessStatus::Not_Isogram; // TODO write function
 	}
 	// if the guess isn't all lowercase
@@ -79,4 +79,9 @@ FBullCowCount FBullCowGame::SubmitValidGuess(FString Guess)
 	}
 
 	return BullCowCount;
+}
+
+bool FBullCowGame::IsIsogram(FString) const
+{
+	return true;
 }
