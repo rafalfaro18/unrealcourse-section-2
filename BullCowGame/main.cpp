@@ -47,13 +47,15 @@ FText GetValidGuess() {
 	switch (Status)
 	{
 	case EGuessStatus::OK:
-		break;
+		return Guess;
 	case EGuessStatus::Not_Isogram:
+		std::cout << "Please enter an Isogram.\n\n";
 		break;
 	case EGuessStatus::Wrong_Lenght:
 		std::cout << "Please enter a " << BCGame.GetHiddenWordLength() << " letter word.\n\n";
 		break;
 	case EGuessStatus::Not_Lowercase:
+		std::cout << "Please enter a lower case word.\n\n";
 		break;
 	default:
 		return Guess;
