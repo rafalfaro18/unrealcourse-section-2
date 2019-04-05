@@ -105,7 +105,13 @@ bool FBullCowGame::IsIsogram(FString Word) const
 	return true; // for example in cases where /0 is entered
 }
 
-bool FBullCowGame::IsLowerCase(FString) const
+bool FBullCowGame::IsLowerCase(FString Word) const
 {
+	for (auto Letter : Word) {
+		// if not a lowercase letter
+			// return false
+		// otherwise
+			// return true
+	}
 	return false;
 }
