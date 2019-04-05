@@ -26,7 +26,7 @@ EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const
 		return EGuessStatus::Not_Lowercase;
 	}
 	// if the guess length is wrong
-	else if (GetHiddenWordLength() != Guess.length()) {
+	else if (Guess.length() != GetHiddenWordLength()) {
 		return EGuessStatus::Wrong_Lenght;
 	}
 	else {
