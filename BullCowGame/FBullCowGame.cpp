@@ -84,6 +84,8 @@ FBullCowCount FBullCowGame::SubmitValidGuess(FString Guess)
 bool FBullCowGame::IsIsogram(FString Word) const
 {
 	// treat 0 and 1 letter words as isograms
+
+	// setup our map
 	// loop all letters of the word
 		// if the letter is in the map
 			// we do NOT have an isogram
