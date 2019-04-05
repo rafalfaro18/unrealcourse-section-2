@@ -104,3 +104,8 @@ bool FBullCowGame::IsIsogram(FString Word) const
 
 	return true; // for example in cases where /0 is entered
 }
+
+bool FBullCowGame::IsLowerCase(FString) const
+{
+	return false;
+}
