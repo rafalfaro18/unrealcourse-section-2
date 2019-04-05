@@ -73,7 +73,7 @@ void PlayGame()
 	BCGame.Reset();
 	int32 MaxTries = BCGame.GetMaxTries();
 
-	for (int32 count = 1; count <= MaxTries; count++) { // TODO change from FOR to WHILE loop when validating tries
+	for (int32 count = 1; count <= MaxTries; count++) { // TODO change from FOR to WHILE
 		FText Guess = GetValidGuess();
 
 		// Submit valid guess to the game
