@@ -85,6 +85,7 @@ void PlayGame()
 	}
 
 	//TODO add a game summary.
+	return;
 }
 
 bool AskToPlayAgain() {
