@@ -90,7 +90,7 @@ bool FBullCowGame::IsIsogram(FString Word) const
 	TMap<char, bool> LetterSeen;
 
 	// loop all letters of the word
-	for (char Letter : Word) {
+	for (auto Letter : Word) {
 		// if the letter is in the map
 			// we do NOT have an isogram
 		// otherwise
